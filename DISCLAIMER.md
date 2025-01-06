@@ -2,7 +2,7 @@
 
 ## General Notice
 
-This software ("CoinSpot Market Data Tracker") is provided "as is", without warranty of any kind, express or implied. By using this software, you acknowledge and agree to the following terms:
+This software ("CoinSpot Market Data Collector") is provided "as is", without warranty of any kind, express or implied. By using this software, you acknowledge and agree to the following terms:
 
 ## Financial Disclaimer
 
