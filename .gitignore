@@ -1,0 +1,69 @@
+# Go specific
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+/vendor/
+go.work
+
+# Binary output directory
+/bin/
+/dist/
+
+# MacOS specific
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# VSCode specific
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+.ionide
+
+# Cursor specific
+.cursorcache/
+.cursor/
+.cursor-data/
+.cursor-workspace/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Application specific
+/data/
+/logs/
+*.log
+/output/
+/tmp/
+
+# Test coverage
+coverage.txt
+coverage.html
+
+# Debug files
+debug.test
+__debug_bin
