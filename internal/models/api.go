@@ -1,15 +1,14 @@
 package models
 
-import "time"
-
-type ApiResponse struct {
+// Latest Prices endpoint
+type APIPriceResponse struct {
 	Status		string	`json:"status"`
 	Message		string	`json:"message"`
-	BuyOrders	[]Order	`json:"buyorders"`
-	SellOrders	[]Order	`json:"sellorders"`
+	Prices		map[string]Price	`json:"prices"`
 }
 
-type OrderbookSnapshot struct {
-	Timestamp	time.Time		`json:"timestamp"`
-	Orderbooks	[]OrderbookData	`json:"orderbooks"`
+type APIPrice struct {
+	Bid		float64	`json:"bid"`
+	Ask		float64	`json:"ask"`
+	Last	float64	`json:"last"`
 }

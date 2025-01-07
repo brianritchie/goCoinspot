@@ -18,9 +18,9 @@ func NewOrderCollector(cfg *config.Config, store storage.Storage) *OrderCollecto
 	return &OrderCollector{
 		config: cfg,
 		storage: store,
-		limiter: NewRateLimiter(cfg.Interval),
+		limiter:  NewRateLimiter(cfg.RequestsPerMinute),
 		client: &http.Client{
-			Timeout: cfg.Interval,
+			Timeout: cfg.RequestTimeout,
 		},
 	}
 }
