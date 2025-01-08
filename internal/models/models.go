@@ -30,3 +30,25 @@ type Order struct {
 }
 
 // TradeData represents our internal trade tracking structure
+type TradeData struct {
+	Timestamp	time.Time	`json:"timestamp"`
+	Trades		[]Trade		`json:"trades"`
+}
+
+// Trade represents our internal trade information
+type Trade struct {
+	OrderType		string	`json:"ordertype"`  // buy or sell
+	Amount		float64	`json:"amount"`
+	Rate		float64	`json:"rate"`
+	Total		float64	`json:"total"`
+	Market		string	`json:"market"`
+	ExecutedAt	time.Time	`json:"executedAt"`
+	Fees		TradeFees	`json:"fees"`
+}
+
+// Internal fee structure
+type TradeFees struct {
+	FeeExGst	float64	`json:"feeExGst"`
+	Gst		float64	`json:"gst"`
+	Total	float64	`json:"total"`
+}
