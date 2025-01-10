@@ -1,4 +1,4 @@
-# CoinSpot Market Data Collector
+# goCoinSpot - CoinSpot Market Data Collector
 
 Objective: A modular Go application for collecting and storing market data from CoinSpot's public API. This application collects price and order book data at configurable intervals and stores it in a structured format for analysis.
 
@@ -27,11 +27,13 @@ coinspot-tracker/
 │   ├── config/
 │   │   └── config.go         # Configuration management
 │   ├── models/
-│   │   └── models.go         # Data structures
+│   │   ├── api.go            # API models
+│   │   ├── models.go         # Internal models
+│   │   └── transformers.go   # Data transformation functions
 │   ├── collector/
 │   │   ├── collector.go      # Core collector logic
-│   │   ├── prices.go         # Price data collection
-│   │   └── orders.go         # Order book collection
+│   │   ├── orders.go         # Order book collection
+│   │   └── prices.go         # Price data collection
 │   └── storage/
 │       └── filesystem.go     # File system storage implementation
 ├── .env.example              # Environment variable template

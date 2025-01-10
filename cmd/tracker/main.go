@@ -7,9 +7,9 @@ import (
 	"os/signal"
 	"syscall"
 
-	"gocoinspot/internal/collector"
-	"gocoinspot/internal/config"
-	"gocoinspot/internal/storage"
+	"github.com/brianritchie/goCoinspot/internal/collector"
+	"github.com/brianritchie/goCoinspot/internal/config"
+	"github.com/brianritchie/goCoinspot/internal/storage"
 )
 
 func main() {

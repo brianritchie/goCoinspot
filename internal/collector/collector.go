@@ -9,8 +9,6 @@ import (
 
 	"gocoinspot/internal/config"
 	"gocoinspot/internal/storage"
-
-	"github.com/brianritchie/gocoinspot/internal/models"
 )
 
 type Collector struct {
@@ -107,16 +105,3 @@ func (c *Collector) collect(ctx context.Context) error {
 	return nil
 }
 
-// collectPrices wrapper and calls appropriate client method
-func (c *Collector) collectPrices(ctx context.Context) error {
-	prices, err := c.client.GetLatestPrices(ctx)
-	if err != nil {
-		return err
-	}
-
-	priceData := models.TransformAPIPrice(prices)
-
-	return c.storage.SavePrices(priceData)
-}
-
-// collectOrders wrapper and calls appropriate client method
