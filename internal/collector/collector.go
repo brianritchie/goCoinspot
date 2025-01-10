@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"gocoinspot/internal/config"
-	"gocoinspot/internal/storage"
+	"github.com/brianritchie/goCoinspot/internal/config"
+	"github.com/brianritchie/goCoinspot/internal/storage"
 )
 
 type Collector struct {
